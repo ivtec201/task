@@ -12,4 +12,9 @@ public interface TouristRepository extends CrudRepository<Tourist, Long> {
     List<Tourist> findAll();
 
     Tourist save(Tourist tourist);
+
+    @Override
+    void deleteById(Long id);
+
+    Tourist getTouristById(Long id);
 }
